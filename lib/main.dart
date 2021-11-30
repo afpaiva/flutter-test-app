@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +24,26 @@ class MyApp extends StatelessWidget {
               CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/andre.png'),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10.0),
+                child: Text(
+                  'André Paiva',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Graphik',
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 3.0),
+                child: Text(
+                  'Flutter Developer',
+                  style: TextStyle(color: Colors.teal[100]),
+                ),
+              ),
             ],
           ),
         ),

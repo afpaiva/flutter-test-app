@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.orange[300],
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                 child: Text(
                   'André Paiva',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Graphik',
@@ -41,63 +41,59 @@ class MyApp extends StatelessWidget {
                 margin: EdgeInsets.only(top: 3.0),
                 child: Text(
                   'Flutter Developer',
-                  style: TextStyle(color: Colors.teal[100]),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w100,
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 25.0,
+              SizedBox(
+                width: 150.0,
+                height: 30.0,
+                child: Divider(
+                  color: Colors.orange.shade100,
                 ),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+              ),
+              Card(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 25.0,
+                    vertical: 10.0,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
-                      color: Colors.teal,
+                      color: Colors.orange,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       '+55 35 99244 9829',
                       style: TextStyle(
-                        color: Colors.teal.shade900,
+                        color: Colors.black,
                         fontFamily: 'Graphik',
                         fontSize: 20.0,
                       ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 25.0,
-                  vertical: 0.0,
-                ),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                    ),
+                  )),
+              Card(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 25.0,
+                    vertical: 10.0,
+                  ),
+                  color: Colors.white,
+                  child: ListTile(
+                    leading: Icon(
                       Icons.mail,
-                      color: Colors.teal,
+                      color: Colors.orange,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       'andrepaiva.arq@gmail.com',
                       style: TextStyle(
-                        color: Colors.teal.shade900,
+                        color: Colors.black,
                         fontFamily: 'Graphik',
                         fontSize: 20.0,
                       ),
-                    )
-                  ],
-                ),
-              )
+                    ),
+                  ))
             ],
           ),
         ),
